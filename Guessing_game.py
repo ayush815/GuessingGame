@@ -17,10 +17,3 @@ while(userGuess != randNumber):
    except Exception as e:
       print(f"Your input resulted is an error, please enter only a number: {e}")
 print(f"Your guessed the number in {guesses} guesses")
-with open("hiscore.txt", "r") as f:
-  hiscore = int(f.read())
-
-if (guesses<hiscore):
-  print("You have just broken the hiscore")  
-  with open("hiscore.txt", "w") as f:
-     f.write(str(guesses))
